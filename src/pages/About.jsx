@@ -38,7 +38,7 @@ const About = () => {
           opacity: 0,
           transformOrigin: "left center",
           duration: 1,
-          delay : 1,
+          delay: 1,
           ease: "power2.out",
           scrollTrigger: {
             trigger: ".about-hr",
@@ -59,7 +59,7 @@ const About = () => {
             trigger: ".about-text",
             scroller: "body",
             start: "top 85%",
-            end : "top 20%",
+            end: "top 20%",
             scrub: 3,
           },
         });
@@ -84,10 +84,8 @@ const About = () => {
           About Me
         </h1>
         <hr className="about-hr border-[#00f050] border-t-2 w-24 my-6 mx-auto" />
-        <p className="about-text text-xl md:text-2xl leading-relaxed text-gray-300 font-montserrat">
-        {splitText(
-            "I'm Amraz Rafeeque, a self-taught full stack web developer with expertise in Python Django and React JS. My passion lies in creating modern, efficient, and user-friendly web experiences that combine performance with stunning visuals. Every project I build is focused on clarity, speed, and delivering a smooth user experience."
-          )}
+        <p className="about-text text-xl md:text-2xl leading-relaxed text-gray-300 font-montserrat text-start">
+          {splitText(`Hi, I’m Amraz Rafeeque, a self-taught Full Stack Web Developer who loves turning ideas into interactive and high-performance web applications.My journey into coding started with curiosity and a desire to build things from scratch. Over time, I mastered Python Django for powerful backends and React.js for dynamic, responsive frontends which gave me the ability to craft complete, end-to-end solutions. I’m passionate about writing clean, maintainable code and delivering seamless user experiences that balance speed, functionality, and design. Whether it’s optimizing performance, designing intuitive UIs, or integrating complex features, I aim to make every project both efficient and enjoyable to use. When I’m not coding, you’ll probably find me exploring new tech tools, refining my skills, or brainstorming the next big project idea.`)}
         </p>
       </div>
     </section>
