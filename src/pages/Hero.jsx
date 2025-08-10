@@ -41,8 +41,7 @@ const Hero = () => {
 
   // Text animation for typewriter effect
   const text1 = "IT'S ME AMRAZ!!";
-  const text2 = "A FULLSTACK DEVELOPER";
-
+  const text2 = ["A", "FULLSTACK", "DEVELOPER"];
   return (
     <section className="px-8 md:px-28 py-20 overflow-hidden">
       <motion.div
@@ -88,7 +87,7 @@ const Hero = () => {
             />
           </motion.div>
         </motion.div>
-  
+
         {/* Text - Second on mobile, first on desktop */}
         <motion.div
           initial={{ y: 100, opacity: 0 }}
@@ -98,48 +97,56 @@ const Hero = () => {
         >
           <motion.h1
             variants={titleVariants}
-            className="text-pista text-4xl md:text-5xl font-montserrat-extrabold tracking-wider"
+            className="text-pista text-4xl md:text-5xl font-montserrat-extrabold tracking-wider whitespace-nowrap"
           >
-            {text1.split("").map((char, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.05,
-                  ease: [0.6, -0.05, 0.01, 0.99],
-                }}
-                className="inline-block"
-              >
-                {char === " " ? "\u00A0" : char}
-              </motion.span>
+            {text1.split(" ").map((word, wIndex) => (
+              <span key={wIndex} className="inline-block mr-2">
+                {word.split("").map((char, index) => (
+                  <motion.span
+                    key={index}
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.5,
+                      delay: (wIndex * 6 + index) * 0.05,
+                      ease: [0.6, -0.05, 0.01, 0.99],
+                    }}
+                    className="inline-block"
+                  >
+                    {char}
+                  </motion.span>
+                ))}
+              </span>
             ))}
           </motion.h1>
-  
+
           <motion.h2
-            className="text-white text-3xl md:text-4xl font-montserrat-extrabold tracking-wider"
+            className="text-white text-3xl md:text-4xl font-montserrat-extrabold"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
           >
-            {text2.split("").map((char, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, rotateY: 90 }}
-                animate={{ opacity: 1, rotateY: 0 }}
-                transition={{
-                  duration: 0.4,
-                  delay: 0.8 + index * 0.03,
-                  ease: "easeOut",
-                }}
-                className="inline-block"
-              >
-                {char === " " ? "\u00A0" : char}
-              </motion.span>
+            {text2.map((word, wIndex) => (
+              <span key={wIndex} className="inline-block mr-2">
+                {word.split("").map((char, index) => (
+                  <motion.span
+                    key={index}
+                    initial={{ opacity: 0, rotateY: 90 }}
+                    animate={{ opacity: 1, rotateY: 0 }}
+                    transition={{
+                      duration: 0.4,
+                      delay: 0.8 + (wIndex * 8 + index) * 0.03,
+                      ease: "easeOut",
+                    }}
+                    className="inline-block tracking-wider"
+                  >
+                    {char}
+                  </motion.span>
+                ))}
+              </span>
             ))}
           </motion.h2>
-  
+
           <motion.p
             variants={itemVariants}
             className="text-gray-400 max-w-lg leading-relaxed font-montserrat"
@@ -163,7 +170,7 @@ const Hero = () => {
             </motion.span>
             .
           </motion.p>
-  
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -186,12 +193,10 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </motion.div>
-  
+
       <div className="h-32" />
     </section>
   );
-  
-
 };
 
 export default Hero;

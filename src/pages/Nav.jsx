@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import logo from "../assets/logo.png";
 import { navigationLinks } from "../info/index.js";
-import menu3 from "react-useanimations/lib/menu3";
 import { motion, AnimatePresence, useScroll, useTransform } from "motion/react";
-import UseAnimations from "react-useanimations";
+import { Menu } from "lucide-react";
 
 const Nav = () => {
   const [mobileView, setMobileView] = useState(false);
@@ -125,7 +124,7 @@ const Nav = () => {
             stiffness: 120,
             damping: 20,
           }}
-          className="inline-flex items-center justify-between font-montserrat py-3 md:py-4 rounded-4xl px-6 md:px-8 border"
+          className="inline-flex items-center justify-between font-montserrat py-3 md:py-4 rounded-4xl px-2 md:px-8 border"
         >
           <motion.div
             initial={{ scale: 0, rotate: -180 }}
@@ -196,12 +195,7 @@ const Nav = () => {
               onClick={() => setMobileView(!mobileView)}
               className="p-2 rounded-full bg-black/10 backdrop-blur-sm border border-white/20 hover:bg-pista transition-all duration-300"
             >
-              <UseAnimations
-                animation={menu3}
-                size={24}
-                strokeColor="#FFFFFF"
-                reverse={mobileView}
-              />
+              <Menu size={24} color="#FFFFFF" />
             </motion.button>
           </motion.div>
         </motion.div>

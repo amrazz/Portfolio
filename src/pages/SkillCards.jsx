@@ -77,10 +77,10 @@ const secondRow = skillSet.slice(skillSet.length / 2);
         </div>
 
         {/* Subtle edge gradients - much more transparent */}
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-gray-950/80 to-transparent"></div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-gray-950/80 to-transparent"></div>
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-gray-950/60 to-transparent"></div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-gray-950/60 to-transparent"></div>
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-transparent"></div>
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-transparent"></div>
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-20  bg-transparent"></div>
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-20  bg-transparent"></div>
       </div>
     </div>
   );
