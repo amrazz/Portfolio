@@ -113,6 +113,7 @@ const projects = [
         tags: ["React JS", "MongoDB", "FastAPI", "TailwindCSS", "Framer Motion"],
         image: vchat,
         source_code_link: "https://github.com/amrazz/v-chat",
+        live_link : "https://vchat-dev.vercel.app/",
         category: "Full Stack"
     },
     {
