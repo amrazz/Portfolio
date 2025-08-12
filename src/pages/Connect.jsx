@@ -178,6 +178,8 @@ const Connect = () => {
               <div className="flex space-x-4">
                 <motion.a
                   href="https://www.linkedin.com/in/amrazrafeeque/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-pista hover:bg-pista/10 transition-all duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
@@ -201,6 +203,8 @@ const Connect = () => {
 
                 <motion.a
                   href="https://x.com/AmrazRafee13679"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-pista hover:bg-pista/10 transition-all duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}

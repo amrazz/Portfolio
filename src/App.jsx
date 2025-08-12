@@ -121,6 +121,8 @@ const App = () => {
         <div className="writing-mode-vertical-rl text-orientation-mixed">
           <motion.a
             href="mailto:amrazrafeek2020@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-gray-400 hover:text-pista font-montserrat text-sm md:text-base tracking-widest transition-colors duration-300 cursor-pointer"
             whileHover={{
               scale: 1.05,
@@ -145,6 +147,8 @@ const App = () => {
       >
         <motion.a
           href="mailto:amrazrafeek2020@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-gray-400 hover:text-pista font-montserrat text-xs tracking-wide transition-colors duration-300 cursor-pointer px-4 py-2 bg-black/20 backdrop-blur-sm rounded-full border border-gray-700/50"
           whileHover={{
             scale: 1.05,

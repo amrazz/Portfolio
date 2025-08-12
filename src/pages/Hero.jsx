@@ -179,6 +179,8 @@ const Hero = () => {
           >
             <motion.a
               href="/Amraz.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               download="Amraz_Rafeeque_Resume.pdf"
               className="bg-pista text-black px-8 py-3 rounded-lg font-bold"
               whileHover={{
