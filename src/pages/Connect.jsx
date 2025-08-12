@@ -23,7 +23,7 @@ const Connect = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (loading) return;
-    setLoading(true);
+
     // Simple validation
     if (!formData.name.trim()) {
       toast.error("Please enter your name");
@@ -35,7 +35,6 @@ const Connect = () => {
       return;
     }
 
-    // Email format check
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       toast.error("Please enter a valid email");
@@ -47,11 +46,13 @@ const Connect = () => {
       return;
     }
 
-    // Optional: Minimum message length
     if (formData.message.trim().length < 10) {
       toast.error("Message should be at least 10 characters long");
       return;
     }
+
+    // ✅ Only here we set loading
+    setLoading(true);
 
     // Send email
     emailjs
@@ -69,6 +70,9 @@ const Connect = () => {
       .catch((error) => {
         console.error("Error sending email:", error);
         toast.error("Error sending email");
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
 
