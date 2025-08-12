@@ -25,6 +25,11 @@ const Connect = () => {
     if (loading) return;
 
     // Simple validation
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      toast.error("Please fill out all required fields");
+      return;
+    }
+    
     if (!formData.name.trim()) {
       toast.error("Please enter your name");
       return;
