@@ -207,6 +207,9 @@ const skillSet = [
     },
 ];
 
+const about = `I’m Amraz Rafeeque, a self-taught Full Stack Web Developer passionate about turning ideas into fast, interactive, and user-friendly web applications. Skilled in Python Django for robust backends and React.js for dynamic frontends, I build complete end-to-end solutions with clean, maintainable code. I focus on creating seamless user experiences that balance performance, functionality, and design whether it’s optimizing speed, crafting intuitive UIs, or integrating complex features. Outside of coding, I’m always exploring new tech and refining my skills for the next big project.`
 
 
-export { experiences, projects, navigationLinks, slugs, skillSet };
+
+
+export { experiences, projects, navigationLinks, slugs, skillSet, about };

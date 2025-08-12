@@ -213,7 +213,7 @@ const App = () => {
             <About />
           </section>
 
-          <section id="skills" className="min-h-screen py-10 sm:py-16 md:py-20">
+          <section id="skills" className="">
             <Skills />
           </section>
 

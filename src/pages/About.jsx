@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { about } from "../info";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -77,6 +78,7 @@ const About = () => {
       </span>
     ));
 
+
   return (
     <section ref={aboutRef}>
       <div className="max-w-4xl mx-auto px-4 text-center ">
@@ -85,7 +87,7 @@ const About = () => {
         </h1>
         <hr className="about-hr border-[#00f050] border-t-2 w-24 my-6 mx-auto" />
         <p className="about-text text-xl md:text-2xl leading-relaxed text-gray-300 font-montserrat text-start">
-          {splitText(`Hi, I’m Amraz Rafeeque, a self-taught Full Stack Web Developer who loves turning ideas into interactive and high-performance web applications.My journey into coding started with curiosity and a desire to build things from scratch. Over time, I mastered Python Django for powerful backends and React.js for dynamic, responsive frontends which gav me the ability to craft complete, end-to-end solutions. I’m passionate about writing clean, maintainable code and delivering seamless user experiences that balance speed, functionality, and design. Whether it’s optimizing performance, designing intuitive UIs, or integrating complex features, I aim to make every project both efficient and enjoyable to use. When I’m not coding, you’ll probably find me exploring new tech tools, refining my skills, or brainstorming the next big project idea.`)}
+          {splitText(about)}
         </p>
       </div>
     </section>

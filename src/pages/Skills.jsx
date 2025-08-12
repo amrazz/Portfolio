@@ -71,17 +71,12 @@ const Skills = () => {
     { scope: skillRef.current }
   );
   return (
-    <section className="container mx-auto px-4 relative z-10">
+    <section className=" relative z-10">
       <h1 className="skill-heading text-5xl md:text-6xl font-extrabold text-[#00f050] tracking-wide text-center">
         SKILLS
       </h1>
       <hr className="skill-hr border-[#00f050] border-t-2 w-24 my-6 mx-auto" />
 
-      {/* <div className="flex items-center justify-center">
-        <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg  px-20 pb-20  bg-transparent">
-          <IconCloud iconSlugs={slugs} />
-        </div>
-      </div> */}
 
       <div>
         <SkillCards />
@@ -92,3 +87,9 @@ const Skills = () => {
 };
 
 export default Skills;
+
+{/* <div className="flex items-center justify-center">
+  <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg  px-20 pb-20  bg-transparent">
+    <IconCloud iconSlugs={slugs} />
+  </div>
+</div> */}
