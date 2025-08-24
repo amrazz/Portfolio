@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import ProfileCard from "../UIComponents/ProfileCard";
 import myimg from "../assets/myimg.png";
+import me from "../assets/me.png";
 
 const Hero = () => {
   // Animation variants
@@ -79,7 +80,7 @@ const Hero = () => {
             <ProfileCard
               name="AMRAZ RAFEEQUE"
               title="Software Engineer"
-              avatarUrl={myimg}
+              avatarUrl={me}
               showBehindGradient={true}
               showUserInfo={false}
               enableTilt={true}
